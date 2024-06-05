@@ -25,8 +25,8 @@ export default async function HomePage() {
         <div key={post.id}>{post.name}</div>
         ))}
         {
-        [...mockImages, ...mockImages, ...mockImages].map((image) => (
-          <div key={image.id} className="w-40 p-4">
+        [...mockImages, ...mockImages, ...mockImages].map((image, index) => (
+          <div key={image.id + "-" + index} className="w-40 p-4">
             <img src={image.url} alt="image" />
           </div>
         ))
